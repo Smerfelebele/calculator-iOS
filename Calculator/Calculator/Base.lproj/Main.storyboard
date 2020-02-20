@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2p8-e0-AgV">
+                                <rect key="frame" x="397" y="167" width="240" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-lA-cOM">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwh-rG-T1Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="5R4-uN-TRU"/>
+                                                    <constraint firstAttribute="width" constant="70" id="ayU-xr-oe2"/>
+                                                    <constraint firstAttribute="width" constant="60" id="x0G-h4-Z5U"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="AC"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="5R4-uN-TRU"/>
+                                                        <exclude reference="ayU-xr-oe2"/>
+                                                        <exclude reference="x0G-h4-Z5U"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="x0G-h4-Z5U"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="5R4-uN-TRU"/>
+                                                        <include reference="ayU-xr-oe2"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZBQ-7j-uEA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rld-NE-Xcx">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="9uA-v9-tL3"/>
+                                                    <constraint firstAttribute="width" constant="70" id="KSc-32-bWD"/>
+                                                    <constraint firstAttribute="height" constant="35" id="yIx-0n-Oqz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="%"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="9uA-v9-tL3"/>
+                                                        <exclude reference="KSc-32-bWD"/>
+                                                        <exclude reference="yIx-0n-Oqz"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="9uA-v9-tL3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="KSc-32-bWD"/>
+                                                        <include reference="yIx-0n-Oqz"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="operationalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRQ-4y-rf7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hD-bJ-7zL">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="DuW-Hc-I9n"/>
+                                                    <constraint firstAttribute="height" constant="35" id="EEk-Zh-v3Y"/>
+                                                    <constraint firstAttribute="width" constant="60" id="oCd-kY-YRg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="+/-"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="DuW-Hc-I9n"/>
+                                                        <exclude reference="EEk-Zh-v3Y"/>
+                                                        <exclude reference="oCd-kY-YRg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="oCd-kY-YRg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="DuW-Hc-I9n"/>
+                                                        <include reference="EEk-Zh-v3Y"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="oppositeValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYu-Eu-FR7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-dU-qNy">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="nh6-cE-WEV"/>
+                                                    <constraint firstAttribute="width" constant="60" id="o3L-1i-aQT"/>
+                                                    <constraint firstAttribute="width" constant="70" id="qld-fn-4Yo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="nh6-cE-WEV"/>
+                                                        <exclude reference="o3L-1i-aQT"/>
+                                                        <exclude reference="qld-fn-4Yo"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="o3L-1i-aQT"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="nh6-cE-WEV"/>
+                                                        <include reference="qld-fn-4Yo"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="operationalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JPm-8U-PRw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="1kG-A6-tgs"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="1kG-A6-tgs"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiY-IM-JGs">
+                                        <rect key="frame" x="0.0" y="30" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPv-Pi-vu3">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="DHH-c6-BnT"/>
+                                                    <constraint firstAttribute="width" constant="60" id="Fmf-mL-Laq"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Xe8-bw-Nkb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="DHH-c6-BnT"/>
+                                                        <exclude reference="Fmf-mL-Laq"/>
+                                                        <exclude reference="Xe8-bw-Nkb"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Fmf-mL-Laq"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="DHH-c6-BnT"/>
+                                                        <include reference="Xe8-bw-Nkb"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaO-ud-TkU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbA-80-iVI">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="9oz-bU-qjZ"/>
+                                                    <constraint firstAttribute="height" constant="35" id="KST-do-oje"/>
+                                                    <constraint firstAttribute="width" constant="70" id="RT5-Jb-dV9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="9oz-bU-qjZ"/>
+                                                        <exclude reference="KST-do-oje"/>
+                                                        <exclude reference="RT5-Jb-dV9"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="9oz-bU-qjZ"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="KST-do-oje"/>
+                                                        <include reference="RT5-Jb-dV9"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kt7-u7-rIi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-PJ-udT">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="0j5-OR-haZ"/>
+                                                    <constraint firstAttribute="width" constant="60" id="Zar-oa-hEZ"/>
+                                                    <constraint firstAttribute="height" constant="35" id="sd1-H7-Kpm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="9"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="0j5-OR-haZ"/>
+                                                        <exclude reference="Zar-oa-hEZ"/>
+                                                        <exclude reference="sd1-H7-Kpm"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Zar-oa-hEZ"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="0j5-OR-haZ"/>
+                                                        <include reference="sd1-H7-Kpm"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IqI-VY-3bX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJk-yO-Pvn">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="QWc-Xr-hB6"/>
+                                                    <constraint firstAttribute="width" constant="60" id="jxg-Dt-W82"/>
+                                                    <constraint firstAttribute="width" constant="70" id="kS2-Of-mZ3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="/"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="QWc-Xr-hB6"/>
+                                                        <exclude reference="jxg-Dt-W82"/>
+                                                        <exclude reference="kS2-Of-mZ3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="jxg-Dt-W82"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="QWc-Xr-hB6"/>
+                                                        <include reference="kS2-Of-mZ3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="operationalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EjB-se-eRd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="DLW-eP-fim"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="DLW-eP-fim"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHL-DE-ZNc">
+                                        <rect key="frame" x="0.0" y="60" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3L-uF-KFH">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="7bN-mr-gVl"/>
+                                                    <constraint firstAttribute="height" constant="35" id="cOJ-KH-f3l"/>
+                                                    <constraint firstAttribute="width" constant="60" id="jGk-tq-DPy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="4"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7bN-mr-gVl"/>
+                                                        <exclude reference="cOJ-KH-f3l"/>
+                                                        <exclude reference="jGk-tq-DPy"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="jGk-tq-DPy"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="7bN-mr-gVl"/>
+                                                        <include reference="cOJ-KH-f3l"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oV-aL-sKN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZJ-tj-1Ra">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="7xb-9q-qgZ"/>
+                                                    <constraint firstAttribute="height" constant="35" id="h70-7x-7bF"/>
+                                                    <constraint firstAttribute="width" constant="60" id="x3f-wV-dFE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="5"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7xb-9q-qgZ"/>
+                                                        <exclude reference="h70-7x-7bF"/>
+                                                        <exclude reference="x3f-wV-dFE"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="x3f-wV-dFE"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="7xb-9q-qgZ"/>
+                                                        <include reference="h70-7x-7bF"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xfe-mI-XAY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjP-Ab-coN">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="aHJ-Il-tsX"/>
+                                                    <constraint firstAttribute="width" constant="60" id="aXk-Bd-cvD"/>
+                                                    <constraint firstAttribute="width" constant="70" id="gdr-O2-hwU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="6"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="aHJ-Il-tsX"/>
+                                                        <exclude reference="aXk-Bd-cvD"/>
+                                                        <exclude reference="gdr-O2-hwU"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="aXk-Bd-cvD"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="aHJ-Il-tsX"/>
+                                                        <include reference="gdr-O2-hwU"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zcg-Hs-Asr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZ3-Ta-DNA">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="20j-gB-QD3"/>
+                                                    <constraint firstAttribute="width" constant="60" id="2FU-xU-Vnq"/>
+                                                    <constraint firstAttribute="height" constant="35" id="DuL-ke-TzC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="*"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="20j-gB-QD3"/>
+                                                        <exclude reference="2FU-xU-Vnq"/>
+                                                        <exclude reference="DuL-ke-TzC"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="2FU-xU-Vnq"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="20j-gB-QD3"/>
+                                                        <include reference="DuL-ke-TzC"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="operationalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNe-q6-7Zc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9uH-FD-Qw1"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="9uH-FD-Qw1"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlV-fF-F9k">
+                                        <rect key="frame" x="0.0" y="90" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgV-JK-PCn">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="7Je-k4-zoL"/>
+                                                    <constraint firstAttribute="height" constant="35" id="KNr-aJ-fAN"/>
+                                                    <constraint firstAttribute="width" constant="70" id="xcI-9P-TF7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7Je-k4-zoL"/>
+                                                        <exclude reference="KNr-aJ-fAN"/>
+                                                        <exclude reference="xcI-9P-TF7"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="7Je-k4-zoL"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="KNr-aJ-fAN"/>
+                                                        <include reference="xcI-9P-TF7"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bI-YJ-ZdD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z61-Ch-Q2u">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="9OS-pC-Bel"/>
+                                                    <constraint firstAttribute="width" constant="70" id="djz-vH-HTw"/>
+                                                    <constraint firstAttribute="width" constant="60" id="oIw-Tp-Uht"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="2"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="9OS-pC-Bel"/>
+                                                        <exclude reference="djz-vH-HTw"/>
+                                                        <exclude reference="oIw-Tp-Uht"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="oIw-Tp-Uht"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="9OS-pC-Bel"/>
+                                                        <include reference="djz-vH-HTw"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgb-PY-MDP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1G-Xw-cd1">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="Fp9-G0-ugS"/>
+                                                    <constraint firstAttribute="width" constant="70" id="iLq-RZ-E6e"/>
+                                                    <constraint firstAttribute="height" constant="35" id="ntF-Ef-hQG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="3"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Fp9-G0-ugS"/>
+                                                        <exclude reference="iLq-RZ-E6e"/>
+                                                        <exclude reference="ntF-Ef-hQG"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Fp9-G0-ugS"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="iLq-RZ-E6e"/>
+                                                        <include reference="ntF-Ef-hQG"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYH-Fc-w6T"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCj-50-q9L">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="JB1-Ub-lD5"/>
+                                                    <constraint firstAttribute="width" constant="70" id="gky-Yf-XkT"/>
+                                                    <constraint firstAttribute="height" constant="35" id="tzn-eT-yw6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="+"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="JB1-Ub-lD5"/>
+                                                        <exclude reference="gky-Yf-XkT"/>
+                                                        <exclude reference="tzn-eT-yw6"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="JB1-Ub-lD5"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="gky-Yf-XkT"/>
+                                                        <include reference="tzn-eT-yw6"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="operationalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3io-uS-1Z7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="X2H-9S-Im9"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="X2H-9S-Im9"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PM4-7J-0j7">
+                                        <rect key="frame" x="0.0" y="120" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS6-tw-71U">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="CCW-8F-ZlQ"/>
+                                                    <constraint firstAttribute="width" constant="60" id="Db3-IB-zoM"/>
+                                                    <constraint firstAttribute="height" constant="35" id="tab-fc-IuH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="."/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="CCW-8F-ZlQ"/>
+                                                        <exclude reference="Db3-IB-zoM"/>
+                                                        <exclude reference="tab-fc-IuH"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Db3-IB-zoM"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="CCW-8F-ZlQ"/>
+                                                        <include reference="tab-fc-IuH"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="dotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qSh-Qk-Ctc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1g-FE-1re">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Ok4-cz-A5g"/>
+                                                    <constraint firstAttribute="height" constant="35" id="UXh-LU-6Hg"/>
+                                                    <constraint firstAttribute="width" constant="60" id="xVq-16-aEU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="0"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Ok4-cz-A5g"/>
+                                                        <exclude reference="UXh-LU-6Hg"/>
+                                                        <exclude reference="xVq-16-aEU"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="xVq-16-aEU"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="Ok4-cz-A5g"/>
+                                                        <include reference="UXh-LU-6Hg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gZ4-kB-THH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeU-17-lRW">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="BFA-Zx-6fX"/>
+                                                    <constraint firstAttribute="width" constant="70" id="JU7-jo-6vQ"/>
+                                                    <constraint firstAttribute="width" constant="60" id="cH8-jI-Cwd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="-"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="BFA-Zx-6fX"/>
+                                                        <exclude reference="JU7-jo-6vQ"/>
+                                                        <exclude reference="cH8-jI-Cwd"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="cH8-jI-Cwd"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="BFA-Zx-6fX"/>
+                                                        <include reference="JU7-jo-6vQ"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="operationalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adI-Wb-vez"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-qZ-hre">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="1NR-j5-bPR"/>
+                                                    <constraint firstAttribute="height" constant="35" id="eBG-3j-47s"/>
+                                                    <constraint firstAttribute="width" constant="70" id="pkN-sf-p2p"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="="/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="1NR-j5-bPR"/>
+                                                        <exclude reference="eBG-3j-47s"/>
+                                                        <exclude reference="pkN-sf-p2p"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="1NR-j5-bPR"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="eBG-3j-47s"/>
+                                                        <include reference="pkN-sf-p2p"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="operationalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0AE-yT-etr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fdw-ZY-0Tt"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="fdw-ZY-0Tt"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3T-fZ-rSz">
+                                <rect key="frame" x="30" y="47" width="607" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="8hN-rb-Tng"/>
+                                    <constraint firstAttribute="height" constant="80" id="ccM-2i-7qD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ccM-2i-7qD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ccM-2i-7qD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="8hN-rb-Tng"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="adb-UT-8iM">
+                                <rect key="frame" x="30" y="167" width="240" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X11-oR-kBc">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="45" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upz-PD-r6d">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="7Cm-ZS-qwL"/>
+                                                    <constraint firstAttribute="height" constant="35" id="a9Y-D0-9Eq"/>
+                                                    <constraint firstAttribute="width" constant="60" id="bgf-lA-hU2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="sqrt"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="a9Y-D0-9Eq"/>
+                                                        <exclude reference="7Cm-ZS-qwL"/>
+                                                        <exclude reference="bgf-lA-hU2"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="bgf-lA-hU2"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="a9Y-D0-9Eq"/>
+                                                        <include reference="7Cm-ZS-qwL"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="sqrtButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQA-3P-b3W"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTK-l7-qdj">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="YgA-c1-zLe"/>
+                                                    <constraint firstAttribute="height" constant="35" id="pOz-ES-Dcn"/>
+                                                    <constraint firstAttribute="width" constant="70" id="vzn-59-6Qg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="pi"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="YgA-c1-zLe"/>
+                                                        <exclude reference="vzn-59-6Qg"/>
+                                                        <exclude reference="pOz-ES-Dcn"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="YgA-c1-zLe"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="vzn-59-6Qg"/>
+                                                        <include reference="pOz-ES-Dcn"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="piButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2As-QW-6kw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-i6-VMf">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="GF0-YE-HUk"/>
+                                                    <constraint firstAttribute="width" constant="60" id="NKC-kC-zLL"/>
+                                                    <constraint firstAttribute="height" constant="35" id="NaY-SL-RG5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="asin"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="GF0-YE-HUk"/>
+                                                        <exclude reference="NaY-SL-RG5"/>
+                                                        <exclude reference="NKC-kC-zLL"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="NKC-kC-zLL"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="GF0-YE-HUk"/>
+                                                        <include reference="NaY-SL-RG5"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="asinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mxd-pl-47Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5s-dQ-FEb">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="9Zm-pK-Sqq"/>
+                                                    <constraint firstAttribute="width" constant="70" id="aPU-GK-5Ma"/>
+                                                    <constraint firstAttribute="height" constant="35" id="hSk-2f-iQd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="sin"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="hSk-2f-iQd"/>
+                                                        <exclude reference="9Zm-pK-Sqq"/>
+                                                        <exclude reference="aPU-GK-5Ma"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="9Zm-pK-Sqq"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="hSk-2f-iQd"/>
+                                                        <include reference="aPU-GK-5Ma"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="sinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ueh-Mp-N5V"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Grw-fc-c2a"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="Grw-fc-c2a"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tig-eN-Ylb">
+                                        <rect key="frame" x="0.0" y="30" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="46" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnL-iR-fS1">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="AGK-ha-VF9"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Cwo-8O-ayH"/>
+                                                    <constraint firstAttribute="width" constant="60" id="K2Z-3N-6iL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="^2"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="AGK-ha-VF9"/>
+                                                        <exclude reference="K2Z-3N-6iL"/>
+                                                        <exclude reference="Cwo-8O-ayH"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="K2Z-3N-6iL"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="AGK-ha-VF9"/>
+                                                        <include reference="Cwo-8O-ayH"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="pow2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qPd-Zb-WiN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txw-aN-GMN">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="6Ve-9f-DjN"/>
+                                                    <constraint firstAttribute="width" constant="70" id="92i-Wn-ruW"/>
+                                                    <constraint firstAttribute="height" constant="35" id="cMn-k9-oqo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="ln"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="6Ve-9f-DjN"/>
+                                                        <exclude reference="cMn-k9-oqo"/>
+                                                        <exclude reference="92i-Wn-ruW"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="6Ve-9f-DjN"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="cMn-k9-oqo"/>
+                                                        <include reference="92i-Wn-ruW"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="lnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FQc-XR-H7c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAC-KO-r5A">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="7ed-HD-uQd"/>
+                                                    <constraint firstAttribute="height" constant="35" id="D7e-nu-bSi"/>
+                                                    <constraint firstAttribute="width" constant="60" id="Zf4-Cf-WZM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="acos"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7ed-HD-uQd"/>
+                                                        <exclude reference="Zf4-Cf-WZM"/>
+                                                        <exclude reference="D7e-nu-bSi"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Zf4-Cf-WZM"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="7ed-HD-uQd"/>
+                                                        <include reference="D7e-nu-bSi"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="acosButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d8N-Ge-tVJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La0-3u-aon">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="4RW-1E-gmF"/>
+                                                    <constraint firstAttribute="width" constant="60" id="8uE-fF-5PC"/>
+                                                    <constraint firstAttribute="height" constant="35" id="eTt-Ta-w0f"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="cos"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="eTt-Ta-w0f"/>
+                                                        <exclude reference="8uE-fF-5PC"/>
+                                                        <exclude reference="4RW-1E-gmF"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="8uE-fF-5PC"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="eTt-Ta-w0f"/>
+                                                        <include reference="4RW-1E-gmF"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="cosButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1lT-lf-G6h"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="BrD-xJ-XLT"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="BrD-xJ-XLT"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLb-5Z-eSL">
+                                        <rect key="frame" x="0.0" y="60" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="47" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0Q-oT-bza">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="3TE-IG-x2b"/>
+                                                    <constraint firstAttribute="width" constant="70" id="9Gu-QB-KUs"/>
+                                                    <constraint firstAttribute="height" constant="35" id="OYr-ql-ZxG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="^3"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="9Gu-QB-KUs"/>
+                                                        <exclude reference="OYr-ql-ZxG"/>
+                                                        <exclude reference="3TE-IG-x2b"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="3TE-IG-x2b"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="9Gu-QB-KUs"/>
+                                                        <include reference="OYr-ql-ZxG"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="pow3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6e-vV-bZ1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uO6-PK-dd2">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="RhK-ch-0lP"/>
+                                                    <constraint firstAttribute="width" constant="70" id="pAk-6c-x8K"/>
+                                                    <constraint firstAttribute="width" constant="60" id="ytR-QX-bDk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="log10"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="pAk-6c-x8K"/>
+                                                        <exclude reference="RhK-ch-0lP"/>
+                                                        <exclude reference="ytR-QX-bDk"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="ytR-QX-bDk"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="pAk-6c-x8K"/>
+                                                        <include reference="RhK-ch-0lP"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="logButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m0r-JC-KiH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToD-jY-Tz0">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Wsj-1f-hdl"/>
+                                                    <constraint firstAttribute="width" constant="60" id="dEh-Bl-gRS"/>
+                                                    <constraint firstAttribute="height" constant="35" id="elJ-Ne-PAd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="atg"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="elJ-Ne-PAd"/>
+                                                        <exclude reference="dEh-Bl-gRS"/>
+                                                        <exclude reference="Wsj-1f-hdl"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="dEh-Bl-gRS"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="elJ-Ne-PAd"/>
+                                                        <include reference="Wsj-1f-hdl"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="atgButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wcq-4q-fTD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZM5-RX-fxC">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="LSy-lC-i12"/>
+                                                    <constraint firstAttribute="width" constant="60" id="WZ1-g3-00V"/>
+                                                    <constraint firstAttribute="height" constant="35" id="nPe-KX-3Sx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="tg"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="LSy-lC-i12"/>
+                                                        <exclude reference="WZ1-g3-00V"/>
+                                                        <exclude reference="nPe-KX-3Sx"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="WZ1-g3-00V"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="LSy-lC-i12"/>
+                                                        <include reference="nPe-KX-3Sx"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="tgButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AxE-89-WZc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="arV-2c-Cyn"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="arV-2c-Cyn"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpP-g3-inw">
+                                        <rect key="frame" x="0.0" y="90" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="48" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-ct-ief">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="di7-EP-iYe"/>
+                                                    <constraint firstAttribute="height" constant="35" id="jY4-TE-2No"/>
+                                                    <constraint firstAttribute="width" constant="60" id="uWX-sh-TQx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="uWX-sh-TQx"/>
+                                                        <exclude reference="jY4-TE-2No"/>
+                                                        <exclude reference="di7-EP-iYe"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="uWX-sh-TQx"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="jY4-TE-2No"/>
+                                                        <include reference="di7-EP-iYe"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeE-SQ-wt3">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="5OE-CP-RY0"/>
+                                                    <constraint firstAttribute="height" constant="35" id="7hK-ZD-DUq"/>
+                                                    <constraint firstAttribute="width" constant="60" id="L5f-J3-CLx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7hK-ZD-DUq"/>
+                                                        <exclude reference="5OE-CP-RY0"/>
+                                                        <exclude reference="L5f-J3-CLx"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="L5f-J3-CLx"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="7hK-ZD-DUq"/>
+                                                        <include reference="5OE-CP-RY0"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPA-oU-tbh">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="bLG-iP-tcI"/>
+                                                    <constraint firstAttribute="width" constant="70" id="mdj-LZ-GgS"/>
+                                                    <constraint firstAttribute="width" constant="60" id="xNE-Gn-vnr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="xNE-Gn-vnr"/>
+                                                        <exclude reference="mdj-LZ-GgS"/>
+                                                        <exclude reference="bLG-iP-tcI"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="xNE-Gn-vnr"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="mdj-LZ-GgS"/>
+                                                        <include reference="bLG-iP-tcI"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="actgButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q2j-An-ET6"/>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYv-G7-gQS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ph-wz-Cou">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Afi-Tt-Fsx"/>
+                                                    <constraint firstAttribute="height" constant="35" id="Hpb-ic-CXg"/>
+                                                    <constraint firstAttribute="width" constant="60" id="VSR-Hi-gj9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="ctg"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="VSR-Hi-gj9"/>
+                                                        <exclude reference="Afi-Tt-Fsx"/>
+                                                        <exclude reference="Hpb-ic-CXg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="VSR-Hi-gj9"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="Afi-Tt-Fsx"/>
+                                                        <include reference="Hpb-ic-CXg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="ctgButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Bt-wf-gbw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Y1M-LH-K7V"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="Y1M-LH-K7V"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ys-i9-rJB">
+                                        <rect key="frame" x="0.0" y="120" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="49" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO5-1z-CPo">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="cjC-7d-Oz6"/>
+                                                    <constraint firstAttribute="width" constant="60" id="eRG-x6-PbS"/>
+                                                    <constraint firstAttribute="width" constant="70" id="vuH-4W-Qrw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="vuH-4W-Qrw"/>
+                                                        <exclude reference="eRG-x6-PbS"/>
+                                                        <exclude reference="cjC-7d-Oz6"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="eRG-x6-PbS"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="vuH-4W-Qrw"/>
+                                                        <include reference="cjC-7d-Oz6"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCT-FZ-owc">
+                                                <rect key="frame" x="60" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="PKH-aF-I4X"/>
+                                                    <constraint firstAttribute="width" constant="60" id="eE5-P8-8kq"/>
+                                                    <constraint firstAttribute="width" constant="70" id="eWq-r6-nhd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="eWq-r6-nhd"/>
+                                                        <exclude reference="PKH-aF-I4X"/>
+                                                        <exclude reference="eE5-P8-8kq"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="eE5-P8-8kq"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="eWq-r6-nhd"/>
+                                                        <include reference="PKH-aF-I4X"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukh-Db-u5W">
+                                                <rect key="frame" x="120" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="WJK-I0-Nga"/>
+                                                    <constraint firstAttribute="width" constant="60" id="ghv-E0-mLa"/>
+                                                    <constraint firstAttribute="height" constant="35" id="yYj-BF-i2B"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="yYj-BF-i2B"/>
+                                                        <exclude reference="WJK-I0-Nga"/>
+                                                        <exclude reference="ghv-E0-mLa"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="ghv-E0-mLa"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="yYj-BF-i2B"/>
+                                                        <include reference="WJK-I0-Nga"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A25-Rs-ofc">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="NSe-mD-QrM"/>
+                                                    <constraint firstAttribute="width" constant="60" id="e6B-qt-YeU"/>
+                                                    <constraint firstAttribute="height" constant="35" id="iDf-h1-oPc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="e6B-qt-YeU"/>
+                                                        <exclude reference="iDf-h1-oPc"/>
+                                                        <exclude reference="NSe-mD-QrM"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="e6B-qt-YeU"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="iDf-h1-oPc"/>
+                                                        <include reference="NSe-mD-QrM"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="pEb-ol-fQK"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="pEb-ol-fQK"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" hidden="NO"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x3T-fZ-rSz" secondAttribute="trailing" constant="30" id="4B3-ny-TZb"/>
+                            <constraint firstItem="adb-UT-8iM" firstAttribute="top" secondItem="x3T-fZ-rSz" secondAttribute="bottom" constant="40" id="59m-nn-uFq" userLabel="Stack View.top = Calculation Screen.bottom + 40"/>
+                            <constraint firstItem="2p8-e0-AgV" firstAttribute="top" secondItem="x3T-fZ-rSz" secondAttribute="bottom" constant="40" id="9OR-TB-M2p"/>
+                            <constraint firstItem="x3T-fZ-rSz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="En8-ql-jK9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2p8-e0-AgV" secondAttribute="trailing" constant="30" id="eRb-13-ZNk"/>
+                            <constraint firstItem="x3T-fZ-rSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="lkR-cG-YL9"/>
+                            <constraint firstItem="2p8-e0-AgV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="r53-Cd-oig"/>
+                            <constraint firstItem="adb-UT-8iM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="w0c-22-3wc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="adb-UT-8iM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="eRb-13-ZNk"/>
+                                <exclude reference="r53-Cd-oig"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="adb-UT-8iM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="eRb-13-ZNk"/>
+                                <include reference="9OR-TB-M2p"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="r53-Cd-oig"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="calculationScreen" destination="x3T-fZ-rSz" id="q3V-Ql-bpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="117.59999999999999"/>
+        </scene>
+    </scenes>
+</document>
